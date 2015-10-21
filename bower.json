@@ -1,0 +1,19 @@
+{
+  "name": "angular-skel",
+  "version": "0.0.1",
+  "description": "A starter project for AngularJS",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-ui-router": "0.2.14",
+    "angular-resource": "1.4.x",
+    "angular-bootstrap": "0.13.4",
+    "font-awesome": "4.4.0",
+    "bootstrap": "3.3.5",
+    "bootstrap-sass": "3.3.5",
+    "bootstrap-social": "4.10.1",
+    "spinkit": "1.2.2",
+    "lodash": "3.10.x",
+    "moment": "2.x"
+  }
+}

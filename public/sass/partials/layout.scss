@@ -1,0 +1,19 @@
+body{
+	padding-top: 80px;
+}
+
+.navbar-brand{
+	padding-top: 0;
+	padding-bottom: 0;
+	display: table;
+
+	> span,
+	> i{
+		display: table-cell;
+		vertical-align: middle
+	}
+
+	> i{
+		padding-right: 10px;
+	}
+}

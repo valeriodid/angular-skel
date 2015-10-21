@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="app" >
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Angular Skeleton</title>
+
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+        <!-- Vendor -->
+        <link href="lib/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="lib/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+    	<my-navbar></my-navbar>
+
+        <div class="container" ui-view></div>
+
+        <my-footer></my-footer>
+
+        <!-- Vendor -->
+        <script src="lib/js/angular.js"></script>
+        <script src="lib/js/angular-ui-router.js"></script>
+        <script src="lib/js/angular-resource.js"></script>
+        <script src="lib/js/ui-bootstrap-tpls.min.js"></script>
+        <script src="lib/js/lodash.js"></script>
+        <script src="lib/js/moment-with-locales.min.js"></script>
+
+        <!-- Core -->
+        <script src="app/core/core.module.js"></script>
+        <script src="app/core/core.config.js"></script>
+
+        <!-- Layout -->
+        <script src="app/layout/layout.module.js"></script>
+
+        <!-- Common Services -->
+        <script src="app/commons/services/utils.service.js"></script>
+        <script src="app/commons/services/ergast.service.js"></script>
+
+        <!-- Common Directives -->
+        <script src="app/commons/directives/loading/loading.directive.js"></script>
+        <script src="app/commons/directives/navbar/navbar.directive.js"></script>
+        <script src="app/commons/directives/footer/footer.directive.js"></script>
+
+        <!-- Home -->
+        <script src="app/home/home.module.js"></script>
+        <script src="app/home/home.controller.js"></script>
+
+        <!-- F1 -->
+        <script src="app/f1/f1.module.js"></script>
+        <script src="app/f1/raceschedule/raceschedule.controller.js"></script>
+        <script src="app/f1/results/results.controller.js"></script>
+        <script src="app/f1/drivers/drivers.controller.js"></script>
+
+        <!-- Bootstrapping -->
+        <script src="app/app.module.js"></script>
+    </body>
+</html>

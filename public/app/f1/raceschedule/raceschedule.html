@@ -1,0 +1,45 @@
+<div>
+    <ol class="breadcrumb">
+        <li><a ui-sref="home">Home</a></li>
+        <!-- <li><a ui-sref="raceschedule({year:2015})">{{racescheduleVm.raceSchedule.season}}</a></li> -->
+        <li class="active">Race Schedule</li>
+    </ol>
+</div>
+
+<section>
+    <div class="page-header">
+        <h1>F1 {{racescheduleVm.raceSchedule.season}} Race Schedule</h1>
+    </div>
+    
+    <div class="table">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Round</th>
+                    <th>Race Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Circuit</th>
+                    <th>Locality</th>
+                    <th>Country</th>
+                    <th>Option</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="race in racescheduleVm.raceSchedule.Races">
+                    <td>{{race.round}}</td>
+                    <td>{{race.raceName}}</td>
+                    <td>{{race.date}}</td>
+                    <td>{{race.time}}</td>
+                    <td>{{race.Circuit.circuitName}}</td>
+                    <td>{{race.Circuit.Location.locality}}</td>
+                    <td>{{race.Circuit.Location.country}}</td>
+                    <td>
+                        <a ui-sref="raceresult({year: race.season, round: race.round})"><i class="fa fa-chevron-right"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div> 
+
+</section>
