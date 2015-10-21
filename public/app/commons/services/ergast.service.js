@@ -26,7 +26,15 @@
             getDriver: {
                 method: 'GET',
                 url    : path + "drivers/:driverId.json"
-            }
+            },
+            getDriverStandings: {
+                method: 'GET',
+                url    : path + ":year/driverStandings.json"
+            },
+            getConstructorStandings: {
+                method: 'GET',
+                url    : path + ":year/constructorStandings.json"
+            },
         });
     }
 
@@ -34,7 +42,9 @@
         return {
             getRaceSchedule: getRaceSchedule,
             getRaceResults: getRaceResults,
-            getDriver: getDriver
+            getDriver: getDriver,
+            getDriverStandings: getDriverStandings,
+            getConstructorStandings: getConstructorStandings
         };
 
         function complete(response){
@@ -59,6 +69,18 @@
 
         function getDriver(params) {
             return ErgastService.getDriver(params).$promise
+                .then(complete)
+                .catch(fails);
+        }
+
+        function getDriverStandings(params) {
+            return ErgastService.getDriverStandings(params).$promise
+                .then(complete)
+                .catch(fails);
+        }
+
+        function getConstructorStandings(params) {
+            return ErgastService.getConstructorStandings(params).$promise
                 .then(complete)
                 .catch(fails);
         }

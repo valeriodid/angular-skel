@@ -35,6 +35,12 @@
                 controller: 'DriversController',
                 controllerAs: 'driversVm',
                 templateUrl: 'app/f1/drivers/drivers.html'
+            })
+            .state('standings',{
+                url: '/f1/:year/standings',
+                controller: 'StandingsController',
+                controllerAs: 'standingsVm',
+                templateUrl: 'app/f1/standings/standings.html'
             });
     }
 })();
