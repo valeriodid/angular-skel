@@ -17,11 +17,15 @@
         return $resource(path, null, {
             getRaceSchedule: {
                 method: 'GET',
-                url    : path + "current.json"
+                url    : path + ":year.json"
             },
             getRaceResults: {
                 method: 'GET',
                 url    : path + ":year/:round/results.json"
+            },
+            getDrivers: {
+                method: 'GET',
+                url    : path + ":year/drivers.json"
             },
             getDriver: {
                 method: 'GET',
@@ -42,6 +46,7 @@
         return {
             getRaceSchedule: getRaceSchedule,
             getRaceResults: getRaceResults,
+            getDrivers: getDrivers,
             getDriver: getDriver,
             getDriverStandings: getDriverStandings,
             getConstructorStandings: getConstructorStandings
@@ -55,14 +60,20 @@
             $log.error('XHR failed.' + error.data);
         }
 
-        function getRaceSchedule() {
-            return ErgastService.getRaceSchedule().$promise
+        function getRaceSchedule(params) {
+            return ErgastService.getRaceSchedule(params).$promise
                 .then(complete)
                 .catch(fails);
         }
 
         function getRaceResults(params) {
             return ErgastService.getRaceResults(params).$promise
+                .then(complete)
+                .catch(fails);
+        }
+
+        function getDrivers(params) {
+            return ErgastService.getDrivers(params).$promise
                 .then(complete)
                 .catch(fails);
         }

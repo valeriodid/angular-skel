@@ -31,10 +31,16 @@
                 templateUrl: 'app/f1/results/results.html'
             })
             .state('drivers',{
-                url: '/f1/drivers/:driverId',
+                url: '/f1/:year/drivers',
                 controller: 'DriversController',
                 controllerAs: 'driversVm',
                 templateUrl: 'app/f1/drivers/drivers.html'
+            })
+            .state('driver',{
+                url: '/f1/drivers/:driverId',
+                controller: 'DriversController',
+                controllerAs: 'driversVm',
+                templateUrl: 'app/f1/drivers/driver.html'
             })
             .state('standings',{
                 url: '/f1/:year/standings',

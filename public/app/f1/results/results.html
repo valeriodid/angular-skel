@@ -38,7 +38,7 @@
                 <tr ng-repeat="result in resultsVm.raceResults.Results">
                     <td>{{result.positionText}}</td>
                     <td>{{result.number}}</td>
-                    <td><a ui-sref="drivers({driverId: result.Driver.driverId})">{{result.Driver.givenName}} {{result.Driver.familyName}}</a></td>
+                    <td><a ui-sref="driver({driverId: result.Driver.driverId})">{{result.Driver.givenName}} {{result.Driver.familyName}}</a></td>
                     <td>{{result.Constructor.name}}</td>
                     <td>{{result.laps}}</td>
                     <td>{{result.grid}}</td>

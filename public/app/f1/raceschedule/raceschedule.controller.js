@@ -24,7 +24,11 @@
         }
 
         function getRaceSchedule(){
-            ErgastDelegate.getRaceSchedule().then(function(data){
+            var params = {
+                year: moment().format('YYYY')
+            };
+
+            ErgastDelegate.getRaceSchedule(params).then(function(data){
                 $log.debug(data);
                 vm.raceSchedule = data.MRData.RaceTable;
             });

@@ -25,7 +25,7 @@
                 <tbody>
                     <tr ng-repeat="driver in standingsVm.standings.drivers.DriverStandings">
                         <td>{{driver.positionText}}</td>
-                        <td>{{driver.Driver.givenName}} {{driver.Driver.familyName}}</td>
+                        <td><a ui-sref="driver({driverId: driver.Driver.driverId})">{{driver.Driver.givenName}} {{driver.Driver.familyName}}</a></td>
                         <td>{{driver.Constructors[0].name}}</td>
                         <td>{{driver.points}}</td>
                         <td>{{driver.wins}}</td>

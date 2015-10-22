@@ -1,30 +1,37 @@
 <div>
     <ol class="breadcrumb">
         <li><a ui-sref="home">Home</a></li>
-        <li class="active">{{driversVm.driver.givenName}} {{driversVm.driver.familyName}}</li>
+        <li><a ui-sref="raceschedule({year: 2015})">{{driversVm.drivers.season}}</a></li>
+        <li class="active">Drivers</li>
     </ol>
 </div>
 
 <section>
-    <h1>{{driversVm.driver.givenName}} {{driversVm.driver.familyName}}</h1>
+    <div class="page-header">
+        <h1>F1 {{driversVm.drivers.season}} Drivers</h1>
+    </div>
 
-    <table class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>Driver Name</th>
-                <th>Nationality</th>
-                <th>Date of Birth</th>
-                <th>Details</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>{{driversVm.driver.givenName}} {{driversVm.driver.familyName}}</td>
-                <td>{{driversVm.driver.nationality}}</td>
-                <td>{{driversVm.driver.dateOfBirth}}</td>
-                <td><a href="{{driversVm.driver.url}}" target="_BLANK">Wikipedia</a></td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="table">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Permanent Number</th>
+                    <th>Name</th>
+                    <th>Nationality</th>
+                    <th>Date of Birth</th>
+                    <th>Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="driver in driversVm.drivers.Drivers">
+                    <td>{{driver.permanentNumber || ''}}</td>
+                    <td><a ui-sref="driver({driverId: driver.driverId})">{{driver.givenName}} {{driver.familyName}}</a></td>
+                    <td>{{driver.nationality}}</td>
+                    <td>{{driver.dateOfBirth}}</td>
+                    <td><a href="{{driver.url}}" target="_BLANK">Wikipedia</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div> 
 
 </section>

@@ -1,0 +1,30 @@
+<div>
+    <ol class="breadcrumb">
+        <li><a ui-sref="home">Home</a></li>
+        <li class="active">{{driversVm.driver.givenName}} {{driversVm.driver.familyName}}</li>
+    </ol>
+</div>
+
+<section>
+    <h1>{{driversVm.driver.givenName}} {{driversVm.driver.familyName}}</h1>
+
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Driver Name</th>
+                <th>Nationality</th>
+                <th>Date of Birth</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{driversVm.driver.givenName}} {{driversVm.driver.familyName}}</td>
+                <td>{{driversVm.driver.nationality}}</td>
+                <td>{{driversVm.driver.dateOfBirth}}</td>
+                <td><a href="{{driversVm.driver.url}}" target="_BLANK">Wikipedia</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</section>
