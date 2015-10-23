@@ -339,4 +339,6 @@ body { padding-top: 80px; }
 .navbar-brand > span, .navbar-brand > i { display: table-cell; vertical-align: middle; }
 .navbar-brand > i { padding-right: 10px; }
 
+.sk-circle { margin: 100px auto; }
+
 /*# sourceMappingURL=style.css.map */

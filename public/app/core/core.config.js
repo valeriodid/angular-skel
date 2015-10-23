@@ -7,6 +7,7 @@
 
     core.$inject = ['$log', '$rootScope', '$httpProvider'];
     core.config(routeConfig);
+    core.config(loadingInterceptor);
 
     // Routing
     function routeConfig($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
@@ -48,5 +49,9 @@
                 controllerAs: 'standingsVm',
                 templateUrl: 'app/f1/standings/standings.html'
             });
+    }
+
+    function loadingInterceptor($httpProvider){
+        $httpProvider.interceptors.push('LoadingInterceptor');
     }
 })();
